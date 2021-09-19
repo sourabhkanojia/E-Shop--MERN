@@ -11,7 +11,6 @@ import axios from "axios";
 export const listProduct = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
-    console.log(1212)
     const { data } = await axios.get("/api/products");
 
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
